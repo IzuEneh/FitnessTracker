@@ -2,6 +2,8 @@ import React from "react";
 import { View, StyleSheet, Text, Platform } from "react-native";
 import { DateTime } from "luxon";
 
+import WeekDayTile from "../components/WeekDayTile";
+
 function DashboardScreen(props: any) {
 	const now = DateTime.now();
 	return (
@@ -10,7 +12,7 @@ function DashboardScreen(props: any) {
 				{now.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)}
 			</Text>
 			<View style={[styles.weekSection, styles.defaultSectionVals]}>
-				<Text>Week day tiles section</Text>
+				<WeekDayTile />
 			</View>
 			<View style={[styles.overViewSection, styles.defaultSectionVals]}>
 				<Text>Workout Overview section</Text>
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
 	},
 	weekSection: {
 		height: "20%",
-		backgroundColor: "dodgerblue",
+		paddingVertical: 10,
 	},
 	overViewSection: {
 		backgroundColor: "grey",
