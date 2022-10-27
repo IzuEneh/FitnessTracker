@@ -1,7 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-function WeekDayTile(props: any) {
+interface WorkdayProps {
+	day: number;
+}
+
+function WeekDayTile(props: WorkdayProps) {
 	return (
 		<View style={styles.container}>
 			<Text style={styles.text}>Mon</Text>
