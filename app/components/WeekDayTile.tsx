@@ -1,3 +1,4 @@
+import { Info } from "luxon";
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
@@ -8,7 +9,7 @@ interface WorkdayProps {
 function WeekDayTile(props: WorkdayProps) {
 	return (
 		<View style={styles.container}>
-			<Text style={styles.text}>Mon</Text>
+			<Text style={styles.text}>{Info.weekdays("short")[props.day]}</Text>
 		</View>
 	);
 }
